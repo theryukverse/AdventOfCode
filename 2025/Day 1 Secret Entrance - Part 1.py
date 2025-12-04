@@ -2,7 +2,7 @@ current_point = 50
 ans = 0
 
 try:
-    with open("input/Day 1 Secret Entrance - Part 1.txt", "r") as file:
+    with open("input/Day 1 Secret Entrance.txt", "r") as file:
         for line in file:
             value = int(line[1:])
             if line[0] == "R":

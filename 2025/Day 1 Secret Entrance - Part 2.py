@@ -3,7 +3,7 @@ ans = 0
 
 try:
     print("cur", current_point)
-    with open("input/Day 1 Secret Entrance - Part 1.txt", "r") as file:
+    with open("input/Day 1 Secret Entrance.txt", "r") as file:
         for line in file:
             prev = current_point
             value = int(line[1:])
