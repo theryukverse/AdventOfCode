@@ -31,6 +31,7 @@ def get_min_coord(n2):
     row_index, col_index = np.unravel_index(np.argmin(n2), n2.shape)
     return row_index, col_index
 
+
 def get_cluster_with_point(point_index, points, traversed_point_indexes):
     point = points[point_index]
     if point.id in traversed_point_indexes:
@@ -47,6 +48,7 @@ def get_cluster_with_point(point_index, points, traversed_point_indexes):
             traversed_point_indexes.update(curr_traversed_point_indexes)
     return cluster, traversed_point_indexes
 
+
 def connect(points, distance):
     last_connection = []
     while len(get_cluster_with_point(0, points, set())[0]) != len(points):
@@ -56,6 +58,7 @@ def connect(points, distance):
         distance[p1_index][p2_index] = max_float
         distance[p2_index][p1_index] = max_float
     return points[last_connection[0]].x * points[last_connection[1]].x
+
 
 try:
     points = []
